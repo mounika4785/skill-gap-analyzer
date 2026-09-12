@@ -1,0 +1,802 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f7f8fc;
+
+    color: #202035;
+
+    min-height: 100vh;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+
+    height: 68px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #e9e9f0;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.navbar-inner {
+    width: 90%;
+
+    max-width: 1100px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 23px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+
+    color: #24243b;
+}
+
+
+.logo span {
+    color: #6c5ce7;
+}
+
+
+.navbar-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: #f1efff;
+
+    border: 1px solid #e2ddff;
+
+    color: #6653d7;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.status-dot {
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #35b879;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-container {
+    width: 90%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    text-align: center;
+
+    padding: 70px 20px 52px;
+}
+
+
+.hero-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 14px;
+
+    margin-bottom: 22px;
+
+    border-radius: 30px;
+
+    background: #eeebff;
+
+    border: 1px solid #ded8ff;
+
+    color: #6753d9;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.hero h1 {
+    max-width: 800px;
+
+    margin: 0 auto 20px;
+
+    font-size: 50px;
+
+    font-weight: 800;
+
+    line-height: 1.12;
+
+    letter-spacing: -2px;
+
+    color: #202035;
+}
+
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #6c5ce7,
+        #3d8bfd
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+.hero p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #74748a;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   ANALYZER CARD
+========================================= */
+
+.analyzer-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e5ed;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 30px rgba(30, 30, 70, 0.06);
+
+    margin-bottom: 52px;
+}
+
+
+.analyzer-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+.header-icon {
+    width: 44px;
+
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #6c5ce7,
+        #4b91f7
+    );
+}
+
+
+.analyzer-header h2 {
+    font-size: 20px;
+
+    font-weight: 750;
+
+    margin-bottom: 3px;
+
+    color: #29293e;
+}
+
+
+.analyzer-header p {
+    color: #8b8b9d;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-grid {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+.form-field {
+    width: 100%;
+}
+
+
+.form-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #303047;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+textarea,
+input {
+    width: 100%;
+
+    border: 1px solid #dedee8;
+
+    border-radius: 11px;
+
+    background: #fbfbfe;
+
+    color: #28283e;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+textarea {
+    display: block;
+
+    min-height: 175px;
+
+    padding: 14px 15px;
+
+    resize: vertical;
+}
+
+
+input {
+    height: 50px;
+
+    padding: 0 15px;
+}
+
+
+textarea::placeholder,
+input::placeholder {
+    color: #a7a7b5;
+}
+
+
+textarea:focus,
+input:focus {
+    outline: none;
+
+    background: #ffffff;
+
+    border-color: #7161e8;
+
+    box-shadow:
+        0 0 0 3px rgba(108, 92, 231, 0.10);
+}
+
+
+.field-help {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #9b9baa;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.button-wrapper {
+    margin-top: 27px;
+}
+
+
+button {
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        90deg,
+        #6c5ce7,
+        #4c91fa
+    );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(83, 91, 220, 0.25);
+}
+
+
+button:active {
+    transform: translateY(0);
+}
+
+
+.button-arrow {
+    font-size: 19px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   RESULTS SECTION
+========================================= */
+
+.results-section {
+    margin-bottom: 55px;
+}
+
+
+.results-heading {
+    margin-bottom: 20px;
+}
+
+
+.results-heading h2 {
+    font-size: 23px;
+
+    color: #29293e;
+
+    margin-bottom: 5px;
+}
+
+
+.results-heading p {
+    color: #858598;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESULTS GRID
+========================================= */
+
+.results-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.result-card {
+    background: #ffffff;
+
+    border: 1px solid #e6e6ee;
+
+    border-radius: 16px;
+
+    padding: 23px;
+
+    min-height: 160px;
+
+    box-shadow:
+        0 5px 20px rgba(30, 30, 70, 0.04);
+}
+
+
+.roadmap-card {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================
+   RESULT CARD HEADER
+========================================= */
+
+.card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+.card-icon {
+    width: 39px;
+
+    height: 39px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+.card-header h3 {
+    color: #2d2d43;
+
+    font-size: 16px;
+
+    font-weight: 750;
+
+    margin-bottom: 3px;
+}
+
+
+.card-header p {
+    color: #9999aa;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   ICON COLORS
+========================================= */
+
+.card-icon.required {
+    background: #e9f8f0;
+
+    color: #24935b;
+}
+
+
+.card-icon.yours {
+    background: #eeebff;
+
+    color: #6c5ce7;
+}
+
+
+.card-icon.missing {
+    background: #fff0f1;
+
+    color: #d84e58;
+}
+
+
+.card-icon.roadmap-icon {
+    background: #fff4df;
+
+    color: #d7941b;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-container {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.skill {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    line-height: 1.2;
+}
+
+
+/* Required */
+
+#requiredSkills .skill {
+    background: #edf5ff;
+
+    border: 1px solid #dceaff;
+
+    color: #3975c1;
+}
+
+
+/* Your skills */
+
+#yourSkills .skill {
+    background: #eaf8f0;
+
+    border: 1px solid #d7efdf;
+
+    color: #238653;
+}
+
+
+/* Missing */
+
+#missingSkills .skill {
+    background: #fff0f1;
+
+    border: 1px solid #ffdadd;
+
+    color: #d44c55;
+}
+
+
+/* =========================================
+   ROADMAP
+========================================= */
+
+.roadmap {
+    width: 100%;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #fafaff;
+
+    border: 1px solid #e9e8f2;
+
+    color: #49495e;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    white-space: pre-line;
+
+    min-height: 80px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    border-top: 1px solid #e7e7ef;
+
+    background: #ffffff;
+}
+
+
+.footer-inner {
+    width: 90%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 25px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #9999a9;
+
+    font-size: 11px;
+}
+
+
+.footer-inner strong {
+    color: #6c5ce7;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar-inner {
+        width: 92%;
+    }
+
+
+    .main-container {
+        width: 92%;
+    }
+
+
+    .hero {
+        padding: 50px 5px 38px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+
+        letter-spacing: -1.2px;
+    }
+
+
+    .hero p {
+        font-size: 14px;
+    }
+
+
+    .analyzer-card {
+        padding: 21px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .roadmap-card {
+        grid-column: auto;
+    }
+
+
+    .result-card {
+        padding: 20px;
+    }
+
+
+    .navbar-right {
+        display: none;
+    }
+
+}

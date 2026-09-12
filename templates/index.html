@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skill Gap Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+            <div class="logo">
+                Skill<span>Gap</span>
+            </div>
+
+            <div class="navbar-right">
+                <span class="status-dot"></span>
+                <span>AI Powered</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-container">
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                ✦ AI Career Assistant
+            </div>
+
+            <h1>
+                Find the skills you need<br>
+                to <span>land your next job.</span>
+            </h1>
+
+            <p>
+                Paste a job description and tell us what you know.
+                Our AI will identify your skill gaps and create
+                a personalized learning roadmap.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= ANALYZER ================= -->
+
+        <section class="analyzer-card">
+
+            <div class="analyzer-header">
+
+                <div class="header-icon">
+                    ✦
+                </div>
+
+                <div>
+                    <h2>Analyze a Job</h2>
+
+                    <p>
+                        Compare the job requirements with your current skills.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <!-- JOB DESCRIPTION -->
+
+                <div class="form-field full-width">
+
+                    <label for="job_description">
+                        Job Description
+                    </label>
+
+                    <textarea
+                        id="job_description"
+                        placeholder="Paste the job description here..."
+                    ></textarea>
+
+                    <span class="field-help">
+                        Include the complete job description for the most accurate analysis.
+                    </span>
+
+                </div>
+
+
+                <!-- YOUR SKILLS -->
+
+                <div class="form-field full-width">
+
+                    <label for="skills">
+                        Your Skills
+                    </label>
+
+                    <input
+                        type="text"
+                        id="skills"
+                        placeholder="Python, Java, SQL, Git, React"
+                    >
+
+                    <span class="field-help">
+                        Enter your skills separated by commas.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="button-wrapper">
+
+                <button id="analyzeBtn">
+
+                    <span>Analyze My Skills</span>
+
+                    <span class="button-arrow">→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <section class="results-section">
+
+
+            <div class="results-heading">
+
+                <div>
+                    <h2>Analysis Results</h2>
+
+                    <p>
+                        Here's how your skills compare with the job requirements.
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <!-- RESULT GRID -->
+
+            <div class="results-grid">
+
+
+                <!-- REQUIRED SKILLS -->
+
+                <article class="result-card">
+
+                    <div class="card-header">
+
+                        <div class="card-icon required">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Required Skills</h3>
+
+                            <p>
+                                Skills found in the job description
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="requiredSkills"
+                        class="skills-container"
+                    ></div>
+
+                </article>
+
+
+
+                <!-- YOUR SKILLS -->
+
+                <article class="result-card">
+
+                    <div class="card-header">
+
+                        <div class="card-icon yours">
+                            ★
+                        </div>
+
+                        <div>
+                            <h3>Your Skills</h3>
+
+                            <p>
+                                Skills you currently have
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="yourSkills"
+                        class="skills-container"
+                    ></div>
+
+                </article>
+
+
+
+                <!-- MISSING SKILLS -->
+
+                <article class="result-card">
+
+                    <div class="card-header">
+
+                        <div class="card-icon missing">
+                            !
+                        </div>
+
+                        <div>
+                            <h3>Missing Skills</h3>
+
+                            <p>
+                                Skills you should focus on
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="missingSkills"
+                        class="skills-container"
+                    ></div>
+
+                </article>
+
+
+
+                <!-- LEARNING ROADMAP -->
+
+                <article class="result-card roadmap-card">
+
+                    <div class="card-header">
+
+                        <div class="card-icon roadmap-icon">
+                            🚀
+                        </div>
+
+                        <div>
+                            <h3>Learning Roadmap</h3>
+
+                            <p>
+                                A practical path to close your skill gap
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="learningRoadmap"
+                        class="roadmap"
+                    ></div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <strong>SkillGap</strong>
+
+            <span>AI-powered skill analysis</span>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
