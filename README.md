@@ -3,7 +3,7 @@
 An AI-powered web application that analyzes a job description, identifies the required technical skills, compares them with the user's skills, and generates a personalized learning roadmap.
 
 ## 🚀 Live Demo
-## 🚀 Live Demo
+
 
 [Open Skill Gap Analyzer](https://skill-gap-analyzer-gtvl.onrender.com)
 
